@@ -13,9 +13,9 @@
 
 # User Story
 
-Based on the location the user selects - it will show a bunch of hiking trails in the area.
+Based on the location the user selects - it will show a pets for adoption in the area.
 
-2 Apis - Google Maps & Hiking Trails api
+2 Apis - Google Maps & Pet Adoption api
 
-https://developers.google.com/maps
-https://documenter.getpostman.com/view/2071749/RzZDiGp8
+https://developers.google.com/maps <br>
+https://www.adoptapet.com/public/apis/pet_list.html#overview
