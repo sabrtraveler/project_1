@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+//<<<<<<< HEAD
 /*SEARCH BY USING A CITY NAME (e.g. athens) OR A COMMA-SEPARATED CITY NAME ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
 const form = document.querySelector(".top-banner form");
 const input = document.querySelector(".top-banner input");
@@ -87,67 +87,67 @@ form.addEventListener("submit", e => {
 $(document).ready(function() {
 
 
-    var API_KEY = "AIzaSyCidAtnKLK0NmfyPCf9auAA459rZytLyAk"
+        var API_KEY = "AIzaSyCidAtnKLK0NmfyPCf9auAA459rZytLyAk"
 
-    var video = "";
+        var video = "";
 
-    $("form").submit(function(event) {
-        event.preventDefault();
+        $("form").submit(function(event) {
+            event.preventDefault();
 
-        var search = $("#search").val();
-        videoSearch(API_KEY, search, 5);
-    });
+            var search = $("#search").val();
+            videoSearch(API_KEY, search, 5);
+        });
 
-    function videoSearch(key, search, maxResults) {
-        $("#videos").empty();
+        function videoSearch(key, search, maxResults) {
+            $("#videos").empty();
 
-        $.get("https://www.googleapis.com/youtube/v3/search?key=" + key + "&q=" + search + "&type=video&part=snippet&&maxResults" + maxResults, function(data) {
-            console.log(data),
+            $.get("https://www.googleapis.com/youtube/v3/search?key=" + key + "&q=" + search + "&type=video&part=snippet&&maxResults" + maxResults, function(data) {
+                console.log(data),
 
-                data.items.forEach(item => {
+                    data.items.forEach(item => {
 
-                    video = `
+                        video = `
                     <iframe width="200" height="200"
                     src="https://www.youtube.com/embed/${item.id.videoId}"
                     frameborder="0" allowfullscreen></iframe> 
                       `
 
-                    $("#videos").append(video);
-                });
-        })
-    }
+                        $("#videos").append(video);
+                    });
+            })
+        }
 
-})
-=======
-//First API - Covid Tracker //
+    })
+    //=======
+    //First API - Covid Tracker //
 
 window.onload = function() {
-	getCovidStats();
+    getCovidStats();
 }
 
 function getCovidStats() {
-	fetch('https://coronavirus-tracker-api.herokuapp.com/v2/locations/225')
-	.then(function(resp) { return resp.json() })
-	.then(function(data) {
-		let population = data.location.country_population;
-		let update = data.location.last_updated;
-		let confirmedCases = data.location.latest.confirmed;
-		let deaths = data.location.latest.deaths;
+    fetch('https://coronavirus-tracker-api.herokuapp.com/v2/locations/225')
+        .then(function(resp) { return resp.json() })
+        .then(function(data) {
+            let population = data.location.country_population;
+            let update = data.location.last_updated;
+            let confirmedCases = data.location.latest.confirmed;
+            let deaths = data.location.latest.deaths;
 
-		document.getElementById('population').innerHTML = population.toLocaleString('en');
-		document.getElementById('update').innerHTML = update.substr(0, 10);
-		document.getElementById('cases').innerHTML = confirmedCases.toLocaleString('en');
-		document.getElementById('deaths').innerHTML = deaths.toLocaleString('en');
-		document.getElementById('percent').innerHTML = ((Number(deaths)/Number(confirmedCases))*100).toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2}) + "%";
-
-
+            document.getElementById('population').innerHTML = population.toLocaleString('en');
+            document.getElementById('update').innerHTML = update.substr(0, 10);
+            document.getElementById('cases').innerHTML = confirmedCases.toLocaleString('en');
+            document.getElementById('deaths').innerHTML = deaths.toLocaleString('en');
+            document.getElementById('percent').innerHTML = ((Number(deaths) / Number(confirmedCases)) * 100).toLocaleString("en", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + "%";
 
 
-	})
-	.catch(function() {
-		console.log("error");
-	})
-	setTimeout(getCovidStats, 43200000) // update every 12 hours
+
+
+        })
+        .catch(function() {
+            console.log("error");
+        })
+    setTimeout(getCovidStats, 43200000) // update every 12 hours
 }
 
 
@@ -158,27 +158,27 @@ var headlines = document.getElementById("headlines");
 var url = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=iGRIa7yg2feYJqwvCvLKKg9TDnJjAGLx";
 
 fetch(url)
-.then(response => response.json())
-.then(data => {
-    console.log(data);
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
 
-    data.results.map(article => {
-        console.log(article.title);
+        data.results.map(article => {
+            console.log(article.title);
 
-        var a = document.createElement("a");
-        a.setAttribute('href', article.url);
-        a.innerHTML = article.title;
+            var a = document.createElement("a");
+            a.setAttribute('href', article.url);
+            a.innerHTML = article.title;
 
-        var p = document.createElement("p");
-        p.innerHTML = article.abstract;
+            var p = document.createElement("p");
+            p.innerHTML = article.abstract;
 
-        var img = document.createElement("img");
-        img.setAttribute('src', article.multimedia[0].url);
+            var img = document.createElement("img");
+            img.setAttribute('src', article.multimedia[0].url);
 
-        headlines.append(img);
-        headlines.appendChild(a);
-        headlines.appendChild(p);
+            headlines.append(img);
+            headlines.appendChild(a);
+            headlines.appendChild(p);
 
-    })
-});
->>>>>>> 0101b36bb865a728e37ab7f3f8beb5af6f35a9d4
+        })
+    });
+//>>>>>>> 0101b36bb865a728e37ab7f3f8beb5af6f35a9d4
