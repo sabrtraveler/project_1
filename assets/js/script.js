@@ -1,32 +1,32 @@
 //First API - Covid Tracker //
 
 window.onload = function() {
-	getCovidStats();
+    getCovidStats();
 }
 
 function getCovidStats() {
-	fetch('https://coronavirus-tracker-api.herokuapp.com/v2/locations/225')
-	.then(function(resp) { return resp.json() })
-	.then(function(data) {
-		let population = data.location.country_population;
-		let update = data.location.last_updated;
-		let confirmedCases = data.location.latest.confirmed;
-		let deaths = data.location.latest.deaths;
+    fetch('https://coronavirus-tracker-api.herokuapp.com/v2/locations/225')
+        .then(function(resp) { return resp.json() })
+        .then(function(data) {
+            let population = data.location.country_population;
+            let update = data.location.last_updated;
+            let confirmedCases = data.location.latest.confirmed;
+            let deaths = data.location.latest.deaths;
 
-		document.getElementById('population').innerHTML = population.toLocaleString('en');
-		document.getElementById('update').innerHTML = update.substr(0, 10);
-		document.getElementById('cases').innerHTML = confirmedCases.toLocaleString('en');
-		document.getElementById('deaths').innerHTML = deaths.toLocaleString('en');
-		document.getElementById('percent').innerHTML = ((Number(deaths)/Number(confirmedCases))*100).toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2}) + "%";
-
-
+            document.getElementById('population').innerHTML = population.toLocaleString('en');
+            document.getElementById('update').innerHTML = update.substr(0, 10);
+            document.getElementById('cases').innerHTML = confirmedCases.toLocaleString('en');
+            document.getElementById('deaths').innerHTML = deaths.toLocaleString('en');
+            document.getElementById('percent').innerHTML = ((Number(deaths) / Number(confirmedCases)) * 100).toLocaleString("en", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + "%";
 
 
-	})
-	.catch(function() {
-		console.log("error");
-	})
-	setTimeout(getCovidStats, 43200000) // update every 12 hours
+
+
+        })
+        .catch(function() {
+            console.log("error");
+        })
+    setTimeout(getCovidStats, 43200000) // update every 12 hours
 }
 
 
@@ -37,26 +37,26 @@ var headlines = document.getElementById("headlines");
 var url = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=iGRIa7yg2feYJqwvCvLKKg9TDnJjAGLx";
 
 fetch(url)
-.then(response => response.json())
-.then(data => {
-    console.log(data);
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
 
-    data.results.map(article => {
-        console.log(article.title);
+        data.results.map(article => {
+            console.log(article.title);
 
-        var a = document.createElement("a");
-        a.setAttribute('href', article.url);
-        a.innerHTML = article.title;
+            var a = document.createElement("a");
+            a.setAttribute('href', article.url);
+            a.innerHTML = article.title;
 
-        var p = document.createElement("p");
-        p.innerHTML = article.abstract;
+            var p = document.createElement("p");
+            p.innerHTML = article.abstract;
 
-        var img = document.createElement("img");
-        img.setAttribute('src', article.multimedia[0].url);
+            var img = document.createElement("img");
+            img.setAttribute('src', article.multimedia[0].url);
 
-        headlines.append(img);
-        headlines.appendChild(a);
-        headlines.appendChild(p);
+            headlines.append(img);
+            headlines.appendChild(a);
+            headlines.appendChild(p);
 
-    })
-});
+        })
+    });
