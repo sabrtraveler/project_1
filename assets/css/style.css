@@ -2,6 +2,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 :root {
+<<<<<<< HEAD
     --bg_main: #0a1f44;
     --text_light: #fff;
     --text_med: #53627c;
@@ -9,6 +10,10 @@
     --red: #ff1e42;
     --darkred: #c3112d;
     --orange: #ff8c00;
+=======
+  --first: #ff1e42;
+  --second: #ff7e5f;
+>>>>>>> 0101b36bb865a728e37ab7f3f8beb5af6f35a9d4
 }
 
 * {
@@ -18,6 +23,7 @@
     font-weight: normal;
 }
 
+<<<<<<< HEAD
 a {
     color: inherit;
     text-decoration: none;
@@ -274,3 +280,82 @@ body {
 .api a:hover {
     text-decoration: none;
 }
+=======
+body {
+  margin: 100px 100px;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+  display: block;
+  margin: 16px 0px;
+  text-decoration: underline;
+}
+
+p {
+  color: black;
+}
+
+img {
+  height: 200px;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 250%;
+}
+
+.title {
+  background: linear-gradient(to right, var(--first), var(--second));
+  padding: 20px;
+}
+
+.subtitle {
+  padding: 20px;
+  font-size: 150%;
+}
+
+div {
+  padding: 20px;
+}
+
+.stats-container {
+  text-align: center;
+  float: right;
+  display: inline-block;
+}
+.location-container {
+  display: inline-block;
+}
+.data-container {
+  border: 2px solid var(--first);
+  margin-right: 30%;
+  margin-left: 30%;
+}
+h4 {
+  font-size: 100%;
+  color: gray;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+.footer {
+  font-family: "Roboto", sans-serif;
+  bottom: 0;
+  font-size: 75%;
+  padding: 5px;
+}
+>>>>>>> 0101b36bb865a728e37ab7f3f8beb5af6f35a9d4
