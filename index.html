@@ -6,14 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 1</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="shortcut icon" href="corona.jpeg" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap"
       rel="stylesheet"
     />
-    <script type="text/javascript" src="app.js"></script>
   </head>
+
   <body>
+    <div class="w3-container w3-center w3-animate-top">
+      <header role="banner">
+        <div class="hero has-text-centered">
+          <h1 class="is-size-1">COVID WATCH</h1>
+          <!-- <p class="quote">&ldquo;The project will rely on integration of 2 api.</p> -->
+        </div>
+      </header>
+    </div>
+
     <h1 class="title">COVID-19 Tracker</h1>
     <h2 class="subtitle">The latest data regarding Covid-19.</h2>
     <div class="data-container">
@@ -36,7 +45,11 @@
     </div>
 
     <h3>Here are the latest headlines:</h3>
-    <div id="headlines"></div>
+    <div class="row">
+      <div class="col-xs|sm|md|lg|xl-1-12">
+        <div id="headlines"></div>
+      </div>
+    </div>
 
     <script src="./assets/js/script.js"></script>
   </body>
