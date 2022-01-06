@@ -1,62 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 1</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-  <video autoplay loop muted>
-    <source src="assets/images:videos/Milky Way Glowing At Night.mp4" type="video/mp4">
-  </video>
-  <div class="content">
-    <h1>Heading</h1>
-    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
-    <button id="myBtn" onclick="myFunction()">Pause</button>
-  </div>
-  
-  <script>
-  var video = document.getElementById("myVideo");
-  var btn = document.getElementById("myBtn");
-  
-  function myFunction() {
-    if (video.paused) {
-      video.play();
-      btn.innerHTML = "Pause";
-    } else {
-      video.pause();
-      btn.innerHTML = "Play";
-    }
-  }
-  </script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 1</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="shortcut icon" href="corona.jpeg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+    <h1 class="title">COVID-19 Tracker</h1>
+    <h2 class="subtitle">The latest data regarding Covid-19.</h2>
+    <div class="data-container">
+      <div class="stats-container">
+        <h4>Cases</h4>
+        <h1 id="cases"></h1>
+        <h4>Deaths</h4>
+        <h1 id="deaths"></h1>
+        <h4>% of Deaths</h4>
+        <h1 id="percent"></h1>
+      </div>
+      <div class="location-container">
+        <h4>Country</h4>
+        <h1 id="country">United States</h1>
+        <h4>Population</h4>
+        <h1 id="population"></h1>
+        <h4>Last Updated</h4>
+        <h1 id="update"></h1>
+      </div>
+    </div>
 
-  <div class="api">
-    <div class="container">
-    </div>
-  </div>
-  <section class="top-banner">
-    <div class="container">
-      <h1 class="heading">Simple Weather App</h1>
-      <form>
-        <input type="text" placeholder="Search for a city" autofocus>
-        <button type="submit">SUBMIT</button>
-        <span class="msg"></span>
-      </form>
-    </div>
-  </section>
-  <section class="ajax-section">
-    <div class="container">
-      <ul class="cities"></ul>
-    </div>
-  </section>
-  <footer class="page-footer">
-    <div class="container">
-      <small>Made by Rob</a>
-      </small>
-    </div>
-  </footer>
-  <script src="./assets/js/script.js"></script>
-</body>
+    <h3>Here are the latest headlines:</h3>
+    <div id="headlines"></div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

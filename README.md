@@ -1,7 +1,5 @@
 # project_1
 
-# Description
-
 # Group Members
 
 1. Robert World
@@ -9,13 +7,11 @@
 3. Hoban Assoweh
 4. Helody
 
-# Wireframe
+# Description
 
-# User Story
+Corona Virus is spreading wilder than ever. Now is 2022 and we need to keep track of this pandamic. We created a Corona Virus tracker & Top news headlines from New York times.
 
-Based on the location the user selects - it will show a pets for adoption in the area.
+2 Apis
 
-2 Apis - Google Maps & Pet Adoption api
-
-https://developers.google.com/maps <br>
-https://www.adoptapet.com/public/apis/pet_list.html#overview
+Covid tracker api - https://github.com/ExpDev07/coronavirus-tracker-api <br>
+New York Times news - https://developer.nytimes.com/apis
