@@ -30,13 +30,15 @@ nav {
 a {
     color: red;
     text-decoration: none;
-    display: block;
+    display: inline;
+    text-align: center;
     margin: 16px 0px;
     text-decoration: underline;
 }
 
 p {
     color: black;
+    display: inline-table;
 }
 
 img {
@@ -49,8 +51,7 @@ html {
 }
 
 h1,
-h2,
-h3 {
+h2 {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     text-align: center;
@@ -58,14 +59,14 @@ h3 {
     font-size: 250%;
 }
 
-h3 {
-    background: linear-gradient(to right, var(--first), var(--second));
-    margin-top: 25px;
+.headtag {
+    margin-top: 20px;
 }
 
-h4 {
+h3 {
+    background: linear-gradient(to right, var(--first), var(--second));
     text-align: center;
-    color: rgb(30, 30, 197)
+    padding: 30px;
 }
 
 .title {
@@ -102,14 +103,33 @@ div {
 
 h4 {
     font-size: 100%;
-    color: gray;
+    text-align: center;
+    color: rgb(30, 30, 197);
     font-family: "Roboto", sans-serif;
     font-weight: 300;
-    text-align: center;
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 5px;
+}
+
+.row {
+    justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
 }
 
 .footer {

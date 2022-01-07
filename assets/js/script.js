@@ -33,6 +33,7 @@ function getCovidStats() {
 
 // Second API - News from NY TIMES //
 //store url into variable
+
 var headlines = document.getElementById("headlines");
 var url = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=iGRIa7yg2feYJqwvCvLKKg9TDnJjAGLx";
 
@@ -44,19 +45,32 @@ fetch(url)
         data.results.map(article => {
             console.log(article.title);
 
-            var a = document.createElement("a");
-            a.setAttribute('href', article.url);
-            a.innerHTML = article.title;
+            let HeadlineDiv = $(`<div class="grid-item"  id="hike-${headlines}">`);
+            let imgDiv = $(`<div class= 'image-overflow'>`);
+            let img = $(`<img class='rounded mx-auto d-block' src='${article.multimedia[0].url}'>`);
+            $(imgDiv).append(img);
+            let a = $("<a target='_blank'class= 'card-link' href=" + article.url + ">" + article.title + "</a></br>");
 
-            var p = document.createElement("p");
-            p.innerHTML = article.abstract;
 
-            var img = document.createElement("img");
-            img.setAttribute('src', article.multimedia[0].url);
+            let p = $("<p class='card-text'  href=" + article.url + ">" + article.abstract + "</p></br>");
 
-            headlines.append(img);
-            headlines.appendChild(a);
-            headlines.appendChild(p);
+            // var a = document.createElement("a");
+            // a.setAttribute('href', article.url);
+            // a.innerHTML = article.title;
 
+            // var p = document.createElement("p");
+            // p.innerHTML = article.abstract;
+
+
+
+            // var img = document.createElement("img");
+            // img.setAttribute('src', article.multimedia[0].url);
+
+            $(HeadlineDiv).append(a);
+            $(HeadlineDiv).append(img);
+            $(HeadlineDiv).append(p);
+
+            $("#headlines").append(HeadlineDiv);
         })
+
     });
