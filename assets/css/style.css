@@ -13,10 +13,16 @@
   font-weight: normal;
 }
 
-body {
-  margin: 100px 100px;
-  background-color: #ffbf98;
+.background-image {
+  background-image: url("assets/images:videos/body.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+
 }
+
+
 
 /* navbar */
 
