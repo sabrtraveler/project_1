@@ -84,14 +84,16 @@ div {
 }
 
 .stats-container {
-    text-align: center;
+    text-align: left;
     color: darkblue;
-    float: right;
-    display: inline-block;
+    /* float: right; */
+    display: inline;
 }
 
 .location-container {
-    display: inline-block;
+    text-align: center;
+    justify-content: flex-end;
+    display: inline;
     color: darkblue;
 }
 
@@ -120,7 +122,7 @@ h4 {
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: #2196F3;
+    background-color: var(--second);
     padding: 20px;
 }
 
@@ -137,4 +139,40 @@ h4 {
     bottom: 0;
     font-size: 75%;
     padding: 5px;
+}
+
+@media (min-width: 980px) and (max-width: 1199.98px) {
+    .grid-container {
+        display: block;
+    }
+    .covidwatch {
+        display: block;
+    }
+    .data-container {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 575px) and (max-width:768px) {
+    .grid-container {
+        display: block;
+    }
+    .covidwatch {
+        display: block;
+    }
+    .data-container {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 980px) {
+    .grid-container {
+        display: block;
+    }
+    .covidwatch {
+        display: block;
+    }
+    .data-container {
+        display: block;
+    }
 }
