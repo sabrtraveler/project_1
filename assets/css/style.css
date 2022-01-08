@@ -13,13 +13,13 @@
   font-weight: normal;
 }
 
-.background-image {
-  background-image: url("assets/images:videos/body1.jpg");
-  background-size: contain;
+.img{
+  background-size: cover;
   background-repeat: no-repeat;
-  width: 200px;
-  height: 200px;
-
+  width: 100vh;
+  height: 100vh;
+  margin-top: 110px;
+  padding: 0;
 }
 
 
@@ -27,6 +27,7 @@
 /* navbar */
 
 .navbar {
+  padding: 0; 
   display: flex;
   width: 100%;
   justify-content: center;
@@ -35,6 +36,8 @@
   opacity: 0.6;
   position: absolute;
   top: 0;a
+   
+
 }
 
 .navbar ul {
@@ -45,7 +48,7 @@
 
 .navbar ul li {
   font-family: Gelasio;
-  font-size: 1.1rem;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -63,9 +66,33 @@
   box-shadow: 0 0 10px white;
 }
 
+.logo {
+  color: black;
+  float:left;
+  padding-left: 25px;
+  font-size: 16px;
+  font font-weight: bold;
+}
+
+.logo a {
+text-decoration: none;
+color:black
+}
 /* navbar ends */
 
 
+/* banner */
+
+.banner  {
+  width:100%;
+  display: block;
+}
+
+.banner-image {
+  width:100%;
+  display: block;
+
+}
 nav {
   /* background: linear-gradient(to right, var(--first), var(--second)); */
   font-family: "Gelasio", sans-serif;
@@ -152,7 +179,7 @@ div {
 h4 {
   font-size: 100%;
   color: gray;
-  font-family: "Roboto", sans-serif;
+  font-family: "Gelasio", sans-serif;
   font-weight: 300;
   text-align: center;
   padding-top: 20px;
