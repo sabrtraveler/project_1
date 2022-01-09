@@ -2,6 +2,7 @@
 
 window.onload = function() {
     getCovidStats();
+    nytimes();
 }
 
 
@@ -10,9 +11,6 @@ function getCovidStats() {
         .then(function(resp) { return resp.json() })
         .then(function(data) {
 
-            var News = document.getElementById("news");
-
-            let covidwatch = $(`<div class = "location-container" src = '${News}'>`);
             let population = data.location.country_population;
             let update = data.location.last_updated;
             let confirmedCases = data.location.latest.confirmed;
@@ -41,41 +39,59 @@ function getCovidStats() {
 //store url into variable
 
 var headlines = document.getElementById("headlines");
+var endpoints = "https://api.nytimes.com/svc/topstories/v2/";
+var topic = "world.json?";
+var key = "iGRIa7yg2feYJqwvCvLKKg9TDnJjAGLx";
+var url = url = `${endpoints}${topic}api-key=${key}`;
 
-var url = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=iGRIa7yg2feYJqwvCvLKKg9TDnJjAGLx";
+function nytimes() {
+    fetch(url).then(response => response.json())
+        .then(data => render(data))
+        .catch(err => console.error(err));
 
-fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
+    // render data
+    function render(data) {
 
         data.results.map(article => {
             console.log(article.title);
 
+            // creating the headlines div to have the top stories
             let HeadlineDiv = $(`<div class="grid-item"  id="news-${headlines}">`);
             let imgDiv = $(`<div class= 'image-overflow'>`);
             let img = $(`<img class='rounded mx-auto d-block' src='${article.multimedia[0].url}'>`);
             $(imgDiv).append(img);
             let a = $("<a target='_blank'class= 'card-link' href=" + article.url + ">" + article.title + "</a></br>");
-
-
             let p = $("<p class='card-text'  href=" + article.url + ">" + article.abstract + "</p></br>");
 
-            // var a = document.createElement("a");
-            // a.setAttribute('href', article.url);
-            // a.innerHTML = article.title;
-
-            // var p = document.createElement("p");
-            // p.innerHTML = article.abstract;
-
-            // var img = document.createElement("img");
-            // img.setAttribute('src', article.multimedia[0].url);
-
-            $(HeadlineDiv).append(a);
-            $(HeadlineDiv).append(img);
-            $(HeadlineDiv).append(p);
+            $(HeadlineDiv).append(a, img, p);
 
             $("#headlines").append(HeadlineDiv);
-        })
+        });
+    }
+};
+// var headlines = document.getElementById("headlines");
+// // url for fetching the top stories of nytimes
+// var url = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=iGRIa7yg2feYJqwvCvLKKg9TDnJjAGLx";
 
-    });
+// fetch(url)
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data);
+
+//         data.results.map(article => {
+//             console.log(article.title);
+
+//             // creating the headlines div to have the top stories
+//             let HeadlineDiv = $(`<div class="grid-item"  id="news-${headlines}">`);
+//             let imgDiv = $(`<div class= 'image-overflow'>`);
+//             let img = $(`<img class='rounded mx-auto d-block' src='${article.multimedia[0].url}'>`);
+//             $(imgDiv).append(img);
+//             let a = $("<a target='_blank'class= 'card-link' href=" + article.url + ">" + article.title + "</a></br>");
+//             let p = $("<p class='card-text'  href=" + article.url + ">" + article.abstract + "</p></br>");
+
+//             $(HeadlineDiv).append(a, img, p);
+
+//             $("#headlines").append(HeadlineDiv);
+//         })
+
+//     });
