@@ -2,33 +2,170 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 :root {
-    --first: #ff1e42;
-    --second: #ff7e5f;
+  --first: #f9f8f0;
+  --second: #f7ebdd;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-weight: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-family:Gelasio;
 }
 
-body {
-    margin: 100px 100px;
-    background-color: rgb(225, 225, 238);
+
+
+/* CoronaVirus Animation
+Default speed is: 10s
+MoveUpDown is a keyFrames that define the position*/
+.animatediv{
+  animation: MoveUpDown 10s linear infinite;
+  position: absolute;
+  right: 300px;
+  }
+/* position of corona animation */
+@keyframes MoveUpDown {
+  0%, 100% {
+    top: 150px;
+  }
+  50% {
+    top: 250px;
+  }
 }
 
+/* navbar */ 
+
+.navbar {
+  padding: 0; 
+  display: flex;
+  width: 100%;
+  height:100px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;a
+   
+
+}
+
+.navbar ul {
+  float: right;
+  list-style: none;
+  margin-right: 20px 0px;
+
+}
+
+.navbar ul li {
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+  font-family: Gelasio;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 25px;
+  transition: all 0.5 ease;
+  text-transform: uppercase;
+}
+
+.navbar ul li a:hover {
+  background-color: white;
+  opacity: 0.8;
+  color: rgba(136, 79, 41, 0.884);
+  box-shadow: 0 0 10px white;
+}
+
+.logo {
+  color: black;
+  line-height: 100px;
+  font-size: 24px;
+  font-weight: bold;
+  
+}
+/*.logo-img {
+  height: 100px;
+  width: 150px;
+  padding-bottom: 25px;
+  margin-right: 500px; 
+}
+*/
+
+.logo a {
+text-decoration: none;
+color:black
+}
+
+.checkbtn{
+  font-size : 18px;
+  color: white;
+  float:right;
+  line-height: 100px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+  nav ul li a{
+    font-size: 12px;
+  }
+}
+
+  nav ul li{
+    display: block;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+
+  a:hover,a.active{
+    background: none;
+
+  }
+}
+
+/* navbar ends */
+
+
+/* banner */
+
+.banner  {
+  width:100vw;
+  height: 333px;
+  display: block;
+
+}
+
+.banner-image {
+  width:100%;
+  height: 100%;
+  display: block;
+ 
+  
+
+}
 nav {
-    /* background: linear-gradient(to right, var(--first), var(--second)); */
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    text-align: center;
-    padding-bottom: 20px;
-    font-size: 250%;
+  /* background: linear-gradient(to right, var(--first), var(--second)); */
+  font-family: "Gelasio", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 250%;
 }
 
 a {
-    color: red;
+    color: blue;
+    font: Gelasio;
     text-decoration: none;
     display: inline;
     text-align: center;
@@ -42,18 +179,27 @@ p {
 }
 
 img {
-    height: 200px;
+  height: 200px;
 }
 
 html {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
-h1,
+h1{
+  font-family: "Gelasio", sans-serif;
+  font-weight: 300;
+  background: white;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 250%;
+}
+
 h2 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Gelasio", sans-serif;
     font-weight: 300;
+    background: linear-gradient(to right, var(--first), var(--second));
     text-align: center;
     padding-bottom: 20px;
     font-size: 250%;
@@ -61,26 +207,30 @@ h2 {
 
 .headtag {
     margin-top: 20px;
+    font: Gelasio;
 }
 
 h3 {
     background: linear-gradient(to right, var(--first), var(--second));
     text-align: center;
     padding: 30px;
+   
 }
 
+
+
 .title {
-    background: linear-gradient(to right, var(--first), var(--second));
-    padding: 20px;
+  background: linear-gradient(to right, var(--first), var(--second));
+  padding: 20px;
 }
 
 .subtitle {
-    padding: 20px;
-    font-size: 150%;
+  padding: 20px;
+  font-size: 150%;
 }
 
 div {
-    padding: 20px;
+  padding: 20px;
 }
 
 .stats-container {
@@ -98,16 +248,17 @@ div {
 }
 
 .data-container {
-    border: 2px solid var(--first);
-    margin-right: 30%;
-    margin-left: 30%;
+  border: 2px solid;
+  border-color: black;
+  margin-right: 30%;
+  margin-left: 30%;
 }
 
 h4 {
     font-size: 100%;
     text-align: center;
     color: rgb(30, 30, 197);
-    font-family: "Roboto", sans-serif;
+    font-family: "Gelasio", sans-serif;
     font-weight: 300;
     padding-top: 20px;
     padding-left: 20px;
@@ -115,9 +266,6 @@ h4 {
     padding-bottom: 5px;
 }
 
-.row {
-    justify-content: center;
-}
 
 .grid-container {
     display: grid;
@@ -131,15 +279,10 @@ h4 {
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
+    font: Gelasio;
     text-align: center;
 }
 
-.footer {
-    font-family: "Roboto", sans-serif;
-    bottom: 0;
-    font-size: 75%;
-    padding: 5px;
-}
 
 @media (min-width: 980px) and (max-width: 1199.98px) {
     .grid-container {
@@ -171,6 +314,7 @@ h4 {
     }
     .covidwatch {
         display: block;
+
     }
     .data-container {
         display: block;
