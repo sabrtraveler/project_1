@@ -26,7 +26,8 @@ function getCovidStats() {
         .catch(function() {
             console.log("error");
         })
-    setTimeout(getCovidStats, 43200000) // update every 12 hours
+	// update api data every 12 hours
+    setTimeout(getCovidStats, 43200000) 
 }
 
 
