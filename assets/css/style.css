@@ -52,10 +52,9 @@ MoveUpDown is a keyFrames that define the position*/
 }
 
 .navbar ul {
-  float: right;
+  justify-content: right;
   list-style: none;
-  margin-right: 20px 0px;
-
+  padding-left: 500px;
 }
 
 .navbar ul li {
@@ -84,18 +83,12 @@ MoveUpDown is a keyFrames that define the position*/
 
 .logo {
   color: black;
-  line-height: 100px;
+  margin-top: 15px;
+  /* line-height: 100px; */
   font-size: 24px;
   font-weight: bold;
-  
 }
-/*.logo-img {
-  height: 100px;
-  width: 150px;
-  padding-bottom: 25px;
-  margin-right: 500px; 
-}
-*/
+
 
 .logo a {
 text-decoration: none;
@@ -193,7 +186,7 @@ h1{
   background: white;
   text-align: center;
   padding-bottom: 20px;
-  font-size: 250%;
+  font-size: 175%;
 }
 
 h2 {
@@ -283,6 +276,94 @@ h4 {
     text-align: center;
 }
 
+/* About Project */
+.image-section{
+  text-align: center;
+}
+
+.quote{
+  opacity: 50%;
+}
+.team-section{
+  width: 100%;
+}
+.team-section .container{
+width:80% ;
+margin: auto;
+}
+.team-section .container .row{
+  width:60% ;
+  margin: auto;
+  }
+.team-section .container .row .title{
+      text-align:center ;
+      margin-top: 50px;
+      }
+.team-section .container .row .title h1{
+   font-size: 35px;
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+   color: rgb(145, 146, 143);
+}
+.team-section .container .row .title p{
+   font-size: 16px;
+   margin: 30px 0px;
+   color: #A3A3A3 ;
+}
+
+.about-section{
+  background:url(https://images.pexels.com/photos/7078045/pexels-photo-7078045.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) cover left ;
+  background-size :70%;
+  background-color: #FDFDFD;
+  overflow: hidden;
+  padding: 100px 0;
+}
+.inner-container {
+  width:55% ;
+  float: right;
+  background-color: #FDFDFD;
+  padding:50px;
+}
+.inner-container h1 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 800;
+}
+.border{
+  height: 4px;
+  width: 150px;
+  background-color: rgb(167, 175, 172);
+}
+.text{
+  font-size:20px ;
+  color:#545454;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+button{
+  border:none ;
+  border-radius: 8px;
+  padding:8px 15px ;
+  margin-left:470px;
+  background-color: darkblue;
+  color: #fff;
+  text-align: center;
+}
+
+.btn{
+  text-decoration: none;
+  color:white;
+}
+
+a:active {
+  color: none;
+}
+
+button:hover{
+  text-decoration:underline ;
+}
+/* About ends */
 
 @media (min-width: 980px) and (max-width: 1199.98px) {
     .grid-container {
