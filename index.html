@@ -1,56 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID WATCH</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gelasio&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.jpeg" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <body>
+    <!-- Corona animation container -->
+    <div class="animatediv">
+      <img
+        src="https://atheistiran.com/wp-content/uploads/2020/03/corona-virus.png"
+      />
+    </div>
+    <!--Corona animation container ends-->
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
+    <!--Navbar-->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/images/favicon.jpeg" style="height: 40px" />
+        <p>COVID WATCH</p>
+      </div>
 
-</head>
-<body>
+      <ul>
+        <li><a href="#home" class="active">COVID TRACKER</a></li>
+        <li><a href="#stories">HEADLINES</a></li>
+        <li><a href="#about-project">ABOUT PROJECT</a></li>
+      </ul>
+    </nav>
+    <!--Navbar ends-->
 
-    <div class="w3-container w3-center w3-animate-top">
-        <header role="banner">
-            <div class="hero has-text-centered">
-                <h1 class="is-size-1">COVID WATCH</h1>
-                <!-- <p class="quote">&ldquo;The project will rely on integration of 2 api.</p> -->
+    <!--Banner/Hero Image-->
+    <div class="banner">
+      <img class="banner-image" src="assets/images/nyc_banner.jpg" />
+    </div>
+    <!--Covid Tracker-->
+    <div class="covidwatch">
+      <h1 class="headtag" id="home">COVID-19 Tracker</h1>
+      <h2 class="subtitle">The latest data regarding Covid-19.</h2>
+      <div class="grid-container">
+        <div class="grid-item">
+          <h4>Cases</h4>
+          <h1 id="cases"></h1>
+          <h4>Deaths</h4>
+          <h1 id="deaths"></h1>
+        </div>
+        <div class="grid-item">
+          <h4>% of Deaths</h4>
+          <h1 id="percent"></h1>
+          <h4>Country</h4>
+          <h1 id="country">United States</h1>
+        </div>
+        <div class="grid-item">
+          <h4>Population</h4>
+          <h1 id="population"></h1>
+          <h4>Last Updated</h4>
+          <h1 id="update"></h1>
+        </div>
+      </div>
+      <!--Covid Tracker ends-->
+
+
+      <!-- Ny Times Headlines container start-->
+      <h3 class="headtag" id="stories">Here are the latest headlines:</h3>
+      <div class="grid-container" id="headlines"></div>
+      <!--Ny Times container end-->
+
+
+    <!--About Project-->
+    <div class="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="title">
+            <h3 class="headtag" id="about-project">About Project</h3>
+            <p>
+              The Covid pandemic has been a terrible global experience. The
+              Covid Watch app was designed to get the latest Covid-19 data in
+              the United States. In addition, you will also be able to view the
+              latest news headlines from across the globe. This data is
+              automatically updated every 12hrs.
+            </p>
+            <br />
+
+          <button>
+              <a
+                class="btn"
+                href="https://github.com/sabrtraveler/project_1"
+                role="button"
+                >Our Github</a
+              >
+            </button>
+          </div>
+        </div>
+
+        <!-- Team pictures with names and Quote-->
+        <div class="team-card">
+          <div class="card">
+            <div class="image-section">
+              <img src="./assets/images/Helody.jpg" />
+              <img src="./assets/images/Veedit.jfif" />
+              <img src="./assets/images/Habon.png" />
+              <img src="assets/images/Rob.jpeg" />
             </div>
-        </header>
+          </div>
+          <div class="content">
+            <h3>Helody Francois, Veedit Parikh, Habon Assoweh, Robert World</h3>
+            <h3 class="quote">
+              "Out of the mountain of despair, a stone of hope."<br />
+              - Martin Luther King Jr
+            </h3>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- Team pictures end-->
+    <!-- About Project Ends-->
 
 
-    <h1 class="title">COVID-19 Tracker</h1>
-    <h2 class="subtitle">The latest data regarding Covid-19.</h2>
-    <div class="data-container">
-        <div class="stats-container">
-            <h4>Cases</h4>
-            <h1 id="cases"></h1>
-            <h4>Deaths</h4>
-            <h1 id="deaths"></h1>
-            <h4>% of Deaths</h4>
-            <h1 id="percent"></h1>
-        </div>
-        <div class="location-container">
-            <h4>Country</h4>
-            <h1 id="country">United States</h1>
-            <h4>Population</h4>
-            <h1 id="population"></h1>
-            <h4>Last Updated</h4>
-            <h1 id="update"></h1>
-        </div>
-    </div>
-
-    <h3> Here are the latest headlines: </h3>
-    <div class="row">
-            <div id="headlines"></div>
-        </div>
-    </div>
+    <!-- Scripts section-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <script src="./assets/js/script.js"></script>
-</body>
-
+    <!--Scripts section ends-->
+  </body>
 </html>
