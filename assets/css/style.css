@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* UNIVERSAL STYLES */
+=======
+/* Universal styles */
+>>>>>>> c5d39f8985be6f321d3477971c0679eb0f7a40f1
 
 :root {
   --first: #f9f8f0;
@@ -13,7 +17,7 @@
   font-family: Gelasio;
 }
 
-h1 {
+<<<<<<< HEAD h1 {
   font-family: "Gelasio", sans-serif;
   font-weight: 300;
   background: white;
@@ -72,6 +76,71 @@ img {
   height: 200px;
 }
 
+======= a {
+  color: blue;
+  font: Gelasio;
+  text-decoration: none;
+  display: inline;
+  text-align: center;
+  margin: 16px 0px;
+}
+
+a:active {
+  color: none;
+}
+
+p {
+  color: black;
+  display: inline-table;
+}
+
+img {
+  height: 200px;
+}
+
+div {
+  padding: 20px;
+}
+
+h1 {
+  font-family: "Gelasio", sans-serif;
+  font-weight: 300;
+  background: white;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 175%;
+}
+
+h2 {
+  font-family: "Gelasio", sans-serif;
+  font-weight: 300;
+  background: linear-gradient(to right, var(--first), var(--second));
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 250%;
+}
+
+h3 {
+  background: linear-gradient(to right, var(--first), var(--second));
+  text-align: center;
+  padding: 30px;
+}
+
+h4 {
+  font-size: 100%;
+  text-align: center;
+  color: rgb(30, 30, 197);
+  font-family: "Gelasio", sans-serif;
+  font-weight: 300;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+/* universal styles end */
+
+>>>>>>> c5d39f8985be6f321d3477971c0679eb0f7a40f1
 /* navbar */
 
 nav {
@@ -112,6 +181,7 @@ nav {
 }
 
 .navbar ul li a {
+  font-size: 16px;
   text-decoration: none;
   color: black;
   padding: 8px 25px;
@@ -127,22 +197,30 @@ nav {
   box-shadow: 0 0 10px white;
 }
 
+<<<<<<< HEAD
 /*logo starts */
+=======
+/* nav bar end */
+
+/* logo on nav bar */
+>>>>>>> c5d39f8985be6f321d3477971c0679eb0f7a40f1
 
 .logo {
   color: black;
   margin-top: 15px;
-  /* line-height: 100px; */
   font-size: 24px;
   font-weight: bold;
 }
 
-.logo a {
+<<<<<<< HEAD .logo a {
   text-decoration: none;
   color: black;
 }
 
 /*logo ends */
+=======
+/* nav bar ends */
+>>>>>>> c5d39f8985be6f321d3477971c0679eb0f7a40f1
 
 /* CoronaVirus Animation
 Default speed is: 10s
@@ -162,7 +240,8 @@ MoveUpDown is a keyFrames that define the position*/
     top: 250px;
   }
 }
-/*CoronaVirus Animation ends */
+
+/* Animation end */
 
 /* banner */
 
@@ -178,43 +257,17 @@ MoveUpDown is a keyFrames that define the position*/
   display: block;
 }
 
-/*banner ends */
+/* banner end */
 
-/*Covid Watch */
+/* covid tracker section */
 
 .headtag {
   margin-top: 20px;
-  font: Gelasio;
+  font-family: gelasio;
 }
-
 .subtitle {
   padding: 20px;
   font-size: 150%;
-}
-
-div {
-  padding: 20px;
-}
-
-.stats-container {
-  text-align: left;
-  color: darkblue;
-  /* float: right; */
-  display: inline;
-}
-
-.location-container {
-  text-align: center;
-  justify-content: flex-end;
-  display: inline;
-  color: darkblue;
-}
-
-.data-container {
-  border: 2px solid;
-  border-color: black;
-  margin-right: 30%;
-  margin-left: 30%;
 }
 
 .grid-container {
@@ -229,48 +282,19 @@ div {
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 30px;
-  font: Gelasio;
+  font-family: gelasio;
   text-align: center;
 }
 
-/* About Project */
+/* covid tracker section end */
+
+/* about project section */
 
 .title {
   background: linear-gradient(to right, var(--first), var(--second));
   padding: 20px;
 }
 
-.image-section {
-  text-align: center;
-}
-
-.quote {
-  opacity: 50%;
-}
-
-.inner-container {
-  width: 55%;
-  float: right;
-  background-color: #fdfdfd;
-  padding: 50px;
-}
-.inner-container h1 {
-  margin-bottom: 30px;
-  font-size: 30px;
-  font-weight: 800;
-}
-.border {
-  height: 4px;
-  width: 150px;
-  background-color: rgb(167, 175, 172);
-}
-.text {
-  font-size: 20px;
-  color: #545454;
-  line-height: 30px;
-  text-align: justify;
-  margin-bottom: 40px;
-}
 button {
   border: none;
   border-radius: 8px;
@@ -286,16 +310,18 @@ button {
   color: white;
 }
 
-a:active {
-  color: none;
+/* About Project */
+.image-section {
+  text-align: center;
 }
 
-button:hover {
-  text-decoration: underline;
+.quote {
+  opacity: 50%;
 }
-/* About ends */
 
-/*media queries */
+/* About project end */
+
+/* Media quieries */
 
 @media (min-width: 980px) and (max-width: 1199.98px) {
   .grid-container {
@@ -332,3 +358,5 @@ button:hover {
     display: block;
   }
 }
+
+/* Media quieries end */
