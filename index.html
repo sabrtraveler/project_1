@@ -1,42 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--Remove this comment-->
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID WATCH</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap"
-      rel="stylesheet"
-    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
       integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
       crossorigin="anonymous"
     />
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-      crossorigin="anonymous"
-    ></script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COVID WATCH</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/2fccb02d48.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Gelasio&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.jpeg">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.jpeg" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
@@ -51,10 +33,10 @@
     <!--Navbar-->
     <nav class="navbar">
       <div class="logo">
-          <img src="assets/images/favicon.jpeg" style="height: 40px;" />
-          <p>COVID WATCH</p>
+        <img src="assets/images/favicon.jpeg" style="height: 40px" />
+        <p>COVID WATCH</p>
       </div>
-  
+
       <ul>
         <li><a href="#home" class="active">COVID TRACKER</a></li>
         <li><a href="#stories">HEADLINES</a></li>
@@ -63,14 +45,11 @@
     </nav>
     <!--Navbar ends-->
 
-    <!--Header-->
+    <!--Banner/Hero Image-->
     <div class="banner">
       <img class="banner-image" src="assets/images/nyc_banner.jpg" />
     </div>
-
-    <!--<h1 class="title">COVID-19 TRACKER</h1>
-
-    <h2 class="subtitle">The latest data regarding Covid-19.</h2> !-->
+    <!--Covid Tracker-->
     <div class="covidwatch">
       <h1 class="headtag" id="home">COVID-19 Tracker</h1>
       <h2 class="subtitle">The latest data regarding Covid-19.</h2>
@@ -94,22 +73,42 @@
           <h1 id="update"></h1>
         </div>
       </div>
+      <!--Covid Tracker ends-->
 
+
+      <!-- Ny Times Headlines container start-->
       <h3 class="headtag" id="stories">Here are the latest headlines:</h3>
-
       <div class="grid-container" id="headlines"></div>
-    </div>
+      <!--Ny Times container end-->
+
+
     <!--About Project-->
     <div class="about-section">
       <div class="container">
         <div class="row">
           <div class="title">
             <h3 class="headtag" id="about-project">About Project</h3>
-            <p>The Covid pandemic has been a terrible global experience. The Covid Watch app was designed to get the latest Covid-19 data in the United States. In addition, you will also be able to view the latest news headlines from across the globe. This data is automatically updated every 12hrs.</p><br>
-      
-            <button><a class="btn" href="https://github.com/sabrtraveler/project_1" role="button">Our Github</a></button>
+            <p>
+              The Covid pandemic has been a terrible global experience. The
+              Covid Watch app was designed to get the latest Covid-19 data in
+              the United States. In addition, you will also be able to view the
+              latest news headlines from across the globe. This data is
+              automatically updated every 12hrs.
+            </p>
+            <br />
+
+          <button>
+              <a
+                class="btn"
+                href="https://github.com/sabrtraveler/project_1"
+                role="button"
+                >Our Github</a
+              >
+            </button>
           </div>
         </div>
+
+        <!-- Team pictures with names and Quote-->
         <div class="team-card">
           <div class="card">
             <div class="image-section">
@@ -120,15 +119,20 @@
             </div>
           </div>
           <div class="content">
-            <h3>Helody Francois, Veedit Parikh, Habon Assoweh, Robert World
+            <h3>Helody Francois, Veedit Parikh, Habon Assoweh, Robert World</h3>
+            <h3 class="quote">
+              "Out of the mountain of despair, a stone of hope."<br />
+              - Martin Luther King Jr
             </h3>
-            <h3 class="quote">"Out of the mountain of despair, a stone of hope."<br>
-              - Martin Luther King Jr</h3>
           </div>
         </div>
-      
-  <!-- About Project Ends-->
+      </div>
+    </div>
+    <!-- Team pictures end-->
+    <!-- About Project Ends-->
 
+
+    <!-- Scripts section-->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -143,5 +147,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <script src="./assets/js/script.js"></script>
+    <!--Scripts section ends-->
   </body>
 </html>
