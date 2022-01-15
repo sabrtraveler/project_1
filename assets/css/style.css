@@ -1,5 +1,4 @@
-/* RESET STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* UNIVERSAL STYLES */
 
 :root {
   --first: #f9f8f0;
@@ -11,44 +10,90 @@
   padding: 0;
   box-sizing: border-box;
   font-weight: normal;
-  font-family:Gelasio;
+  font-family: Gelasio;
 }
 
-
-
-/* CoronaVirus Animation
-Default speed is: 10s
-MoveUpDown is a keyFrames that define the position*/
-.animatediv{
-  animation: MoveUpDown 10s linear infinite;
-  position: absolute;
-  right: 300px;
-  }
-/* position of corona animation */
-@keyframes MoveUpDown {
-  0%, 100% {
-    top: 150px;
-  }
-  50% {
-    top: 250px;
-  }
+h1 {
+  font-family: "Gelasio", sans-serif;
+  font-weight: 300;
+  background: white;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 175%;
 }
 
-/* navbar */ 
+h2 {
+  font-family: "Gelasio", sans-serif;
+  font-weight: 300;
+  background: linear-gradient(to right, var(--first), var(--second));
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 250%;
+}
+h3 {
+  background: linear-gradient(to right, var(--first), var(--second));
+  text-align: center;
+  padding: 30px;
+}
+
+h4 {
+  font-size: 100%;
+  text-align: center;
+  color: rgb(30, 30, 197);
+  font-family: "Gelasio", sans-serif;
+  font-weight: 300;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+a {
+  color: blue;
+  font: Gelasio;
+  text-decoration: none;
+  display: inline;
+  text-align: center;
+  margin: 16px 0px;
+  text-decoration: underline;
+}
+
+a:hover,
+a.active {
+  background: none;
+}
+
+p {
+  color: black;
+  display: inline-table;
+}
+
+img {
+  height: 200px;
+}
+
+/* navbar */
+
+nav {
+  /* background: linear-gradient(to right, var(--first), var(--second)); */
+  font-family: "Gelasio", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 250%;
+}
 
 .navbar {
-  padding: 0; 
+  padding: 0;
   display: flex;
   width: 100%;
-  height:100px;
+  height: 100px;
   justify-content: center;
   align-items: center;
   background-color: white;
   opacity: 0.6;
   position: absolute;
-  top: 0;a
-   
-
+  top: 0;
 }
 
 .navbar ul {
@@ -72,6 +117,7 @@ MoveUpDown is a keyFrames that define the position*/
   padding: 8px 25px;
   transition: all 0.5 ease;
   text-transform: uppercase;
+  font-size: 16px;
 }
 
 .navbar ul li a:hover {
@@ -81,6 +127,8 @@ MoveUpDown is a keyFrames that define the position*/
   box-shadow: 0 0 10px white;
 }
 
+/*logo starts */
+
 .logo {
   color: black;
   margin-top: 15px;
@@ -89,132 +137,54 @@ MoveUpDown is a keyFrames that define the position*/
   font-weight: bold;
 }
 
-
 .logo a {
-text-decoration: none;
-color:black
+  text-decoration: none;
+  color: black;
 }
 
-.checkbtn{
-  font-size : 18px;
-  color: white;
-  float:right;
-  line-height: 100px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
+/*logo ends */
 
-#check{
-  display: none;
+/* CoronaVirus Animation
+Default speed is: 10s
+MoveUpDown is a keyFrames that define the position*/
+.animatediv {
+  animation: MoveUpDown 10s linear infinite;
+  position: absolute;
+  right: 300px;
 }
-
-  nav ul li a{
-    font-size: 12px;
+/* position of corona animation */
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    top: 150px;
+  }
+  50% {
+    top: 250px;
   }
 }
-
-  nav ul li{
-    display: block;
-  }
-  nav ul li a{
-    font-size: 16px;
-  }
-
-  a:hover,a.active{
-    background: none;
-
-  }
-}
-
-/* navbar ends */
-
+/*CoronaVirus Animation ends */
 
 /* banner */
 
-.banner  {
-  width:100vw;
+.banner {
+  width: 100vw;
   height: 333px;
   display: block;
-
 }
 
 .banner-image {
-  width:100%;
+  width: 100%;
   height: 100%;
   display: block;
- 
-  
-
-}
-nav {
-  /* background: linear-gradient(to right, var(--first), var(--second)); */
-  font-family: "Gelasio", sans-serif;
-  font-weight: 300;
-  text-align: center;
-  padding-bottom: 20px;
-  font-size: 250%;
 }
 
-a {
-    color: blue;
-    font: Gelasio;
-    text-decoration: none;
-    display: inline;
-    text-align: center;
-    margin: 16px 0px;
-    text-decoration: underline;
-}
+/*banner ends */
 
-p {
-    color: black;
-    display: inline-table;
-}
-
-img {
-  height: 200px;
-}
-
-html {
-  height: 100%;
-  width: 100%;
-}
-
-h1{
-  font-family: "Gelasio", sans-serif;
-  font-weight: 300;
-  background: white;
-  text-align: center;
-  padding-bottom: 20px;
-  font-size: 175%;
-}
-
-h2 {
-    font-family: "Gelasio", sans-serif;
-    font-weight: 300;
-    background: linear-gradient(to right, var(--first), var(--second));
-    text-align: center;
-    padding-bottom: 20px;
-    font-size: 250%;
-}
+/*Covid Watch */
 
 .headtag {
-    margin-top: 20px;
-    font: Gelasio;
-}
-
-h3 {
-    background: linear-gradient(to right, var(--first), var(--second));
-    text-align: center;
-    padding: 30px;
-   
-}
-
-
-
-.title {
-  background: linear-gradient(to right, var(--first), var(--second));
-  padding: 20px;
+  margin-top: 20px;
+  font: Gelasio;
 }
 
 .subtitle {
@@ -227,17 +197,17 @@ div {
 }
 
 .stats-container {
-    text-align: left;
-    color: darkblue;
-    /* float: right; */
-    display: inline;
+  text-align: left;
+  color: darkblue;
+  /* float: right; */
+  display: inline;
 }
 
 .location-container {
-    text-align: center;
-    justify-content: flex-end;
-    display: inline;
-    color: darkblue;
+  text-align: center;
+  justify-content: flex-end;
+  display: inline;
+  color: darkblue;
 }
 
 .data-container {
@@ -247,157 +217,118 @@ div {
   margin-left: 30%;
 }
 
-h4 {
-    font-size: 100%;
-    text-align: center;
-    color: rgb(30, 30, 197);
-    font-family: "Gelasio", sans-serif;
-    font-weight: 300;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 5px;
-}
-
-
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: var(--second);
-    padding: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: var(--second);
+  padding: 20px;
 }
 
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    font: Gelasio;
-    text-align: center;
-}
-
-/* About Project */
-.image-section{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  font: Gelasio;
   text-align: center;
 }
 
-.quote{
-  opacity: 50%;
-}
-.team-section{
-  width: 100%;
-}
-.team-section .container{
-width:80% ;
-margin: auto;
-}
-.team-section .container .row{
-  width:60% ;
-  margin: auto;
-  }
-.team-section .container .row .title{
-      text-align:center ;
-      margin-top: 50px;
-      }
-.team-section .container .row .title h1{
-   font-size: 35px;
-   text-transform: uppercase;
-   letter-spacing: 1.5px;
-   color: rgb(145, 146, 143);
-}
-.team-section .container .row .title p{
-   font-size: 16px;
-   margin: 30px 0px;
-   color: #A3A3A3 ;
+/* About Project */
+
+.title {
+  background: linear-gradient(to right, var(--first), var(--second));
+  padding: 20px;
 }
 
-.about-section{
-  background:url(https://images.pexels.com/photos/7078045/pexels-photo-7078045.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) cover left ;
-  background-size :70%;
-  background-color: #FDFDFD;
-  overflow: hidden;
-  padding: 100px 0;
+.image-section {
+  text-align: center;
 }
+
+.quote {
+  opacity: 50%;
+}
+
 .inner-container {
-  width:55% ;
+  width: 55%;
   float: right;
-  background-color: #FDFDFD;
-  padding:50px;
+  background-color: #fdfdfd;
+  padding: 50px;
 }
 .inner-container h1 {
   margin-bottom: 30px;
   font-size: 30px;
   font-weight: 800;
 }
-.border{
+.border {
   height: 4px;
   width: 150px;
   background-color: rgb(167, 175, 172);
 }
-.text{
-  font-size:20px ;
-  color:#545454;
+.text {
+  font-size: 20px;
+  color: #545454;
   line-height: 30px;
   text-align: justify;
   margin-bottom: 40px;
 }
-button{
-  border:none ;
+button {
+  border: none;
   border-radius: 8px;
-  padding:8px 15px ;
-  margin-left:470px;
+  padding: 8px 15px;
+  margin-left: 470px;
   background-color: darkblue;
   color: #fff;
   text-align: center;
 }
 
-.btn{
+.btn {
   text-decoration: none;
-  color:white;
+  color: white;
 }
 
 a:active {
   color: none;
 }
 
-button:hover{
-  text-decoration:underline ;
+button:hover {
+  text-decoration: underline;
 }
 /* About ends */
 
+/*media queries */
+
 @media (min-width: 980px) and (max-width: 1199.98px) {
-    .grid-container {
-        display: block;
-    }
-    .covidwatch {
-        display: block;
-    }
-    .data-container {
-        display: block;
-    }
+  .grid-container {
+    display: block;
+  }
+  .covidwatch {
+    display: block;
+  }
+  .data-container {
+    display: block;
+  }
 }
 
-@media screen and (min-width: 575px) and (max-width:768px) {
-    .grid-container {
-        display: block;
-    }
-    .covidwatch {
-        display: block;
-    }
-    .data-container {
-        display: block;
-    }
+@media screen and (min-width: 575px) and (max-width: 768px) {
+  .grid-container {
+    display: block;
+  }
+  .covidwatch {
+    display: block;
+  }
+  .data-container {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 980px) {
-    .grid-container {
-        display: block;
-    }
-    .covidwatch {
-        display: block;
-
-    }
-    .data-container {
-        display: block;
-    }
+  .grid-container {
+    display: block;
+  }
+  .covidwatch {
+    display: block;
+  }
+  .data-container {
+    display: block;
+  }
 }
