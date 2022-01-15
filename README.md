@@ -1,4 +1,4 @@
-# project_1
+# when_is_covid_over_ohya
 
 # Group Members
 
