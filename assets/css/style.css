@@ -1,9 +1,8 @@
-/* RESET STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Universal styles */
 
 :root {
-    --first: #ff1e42;
-    --second: #ff7e5f;
+    --first: #f9f8f0;
+    --second: #f7ebdd;
 }
 
 * {
@@ -11,29 +10,20 @@
     padding: 0;
     box-sizing: border-box;
     font-weight: normal;
-}
-
-body {
-    margin: 100px 100px;
-    background-color: rgb(225, 225, 238);
-}
-
-nav {
-    /* background: linear-gradient(to right, var(--first), var(--second)); */
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    text-align: center;
-    padding-bottom: 20px;
-    font-size: 250%;
+    font-family: Gelasio;
 }
 
 a {
-    color: red;
+    color: blue;
+    font: Gelasio;
     text-decoration: none;
     display: inline;
     text-align: center;
     margin: 16px 0px;
-    text-decoration: underline;
+}
+
+a:active {
+    color: none;
 }
 
 p {
@@ -45,22 +35,26 @@ img {
     height: 200px;
 }
 
-html {
-    height: 100%;
-    width: 100%;
+div {
+    padding: 20px;
 }
 
-h1,
-h2 {
-    font-family: "Roboto", sans-serif;
+h1 {
+    font-family: "Gelasio", sans-serif;
     font-weight: 300;
+    background: white;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 175%;
+}
+
+h2 {
+    font-family: "Gelasio", sans-serif;
+    font-weight: 300;
+    background: linear-gradient(to right, var(--first), var(--second));
     text-align: center;
     padding-bottom: 20px;
     font-size: 250%;
-}
-
-.headtag {
-    margin-top: 20px;
 }
 
 h3 {
@@ -69,45 +63,11 @@ h3 {
     padding: 30px;
 }
 
-.title {
-    background: linear-gradient(to right, var(--first), var(--second));
-    padding: 20px;
-}
-
-.subtitle {
-    padding: 20px;
-    font-size: 150%;
-}
-
-div {
-    padding: 20px;
-}
-
-.stats-container {
-    text-align: left;
-    color: darkblue;
-    /* float: right; */
-    display: inline;
-}
-
-.location-container {
-    text-align: center;
-    justify-content: flex-end;
-    display: inline;
-    color: darkblue;
-}
-
-.data-container {
-    border: 2px solid var(--first);
-    margin-right: 30%;
-    margin-left: 30%;
-}
-
 h4 {
     font-size: 100%;
     text-align: center;
     color: rgb(30, 30, 197);
-    font-family: "Roboto", sans-serif;
+    font-family: "Gelasio", sans-serif;
     font-weight: 300;
     padding-top: 20px;
     padding-left: 20px;
@@ -115,8 +75,137 @@ h4 {
     padding-bottom: 5px;
 }
 
-.row {
+
+/* universal styles end */
+
+
+/* navbar */
+
+nav {
+    /* background: linear-gradient(to right, var(--first), var(--second)); */
+    font-family: "Gelasio", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 250%;
+}
+
+.navbar {
+    padding: 0;
+    display: flex;
+    width: 100%;
+    height: 100px;
     justify-content: center;
+    align-items: center;
+    background-color: white;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+}
+
+.navbar ul {
+    justify-content: right;
+    list-style: none;
+    /* padding-left: 500px; */
+}
+
+.navbar ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+    font-family: Gelasio;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.navbar ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    padding: 8px 25px;
+    transition: all 0.5 ease;
+    text-transform: uppercase;
+}
+
+.navbar ul li a:hover {
+    background-color: white;
+    opacity: 0.8;
+    color: rgba(136, 79, 41, 0.884);
+    box-shadow: 0 0 10px white;
+}
+
+
+/* nav bar end */
+
+
+/* logo on nav bar */
+
+.logo {
+    color: black;
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* nav bar ends */
+
+
+/* CoronaVirus Animation
+Default speed is: 10s
+MoveUpDown is a keyFrames that define the position*/
+
+.animatediv {
+    animation: MoveUpDown 10s linear infinite;
+    position: absolute;
+    right: 300px;
+}
+
+
+/* position of corona animation */
+
+@keyframes MoveUpDown {
+    0%,
+    100% {
+        top: 150px;
+    }
+    50% {
+        top: 250px;
+    }
+}
+
+
+/* Animation end */
+
+
+/* banner */
+
+.banner {
+    width: 100vw;
+    height: 333px;
+    display: block;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/* banner end */
+
+
+/* covid tracker section */
+
+.headtag {
+    margin-top: 20px;
+    font-family: gelasio;
+}
+
+.subtitle {
+    padding: 20px;
+    font-size: 150%;
 }
 
 .grid-container {
@@ -131,15 +220,52 @@ h4 {
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
+    font-family: gelasio;
     text-align: center;
 }
 
-.footer {
-    font-family: "Roboto", sans-serif;
-    bottom: 0;
-    font-size: 75%;
-    padding: 5px;
+
+/* covid tracker section end */
+
+
+/* about project section */
+
+.title {
+    background: linear-gradient(to right, var(--first), var(--second));
+    padding: 20px;
 }
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    margin-left: 470px;
+    background-color: darkblue;
+    color: #fff;
+    text-align: center;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* About Project */
+
+.image-section {
+    text-align: center;
+}
+
+.quote {
+    opacity: 50%;
+}
+
+
+/* About project end */
+
+
+/* Media quieries */
 
 @media (min-width: 980px) and (max-width: 1199.98px) {
     .grid-container {
@@ -153,7 +279,7 @@ h4 {
     }
 }
 
-@media screen and (min-width: 575px) and (max-width:768px) {
+@media screen and (min-width: 575px) and (max-width: 768px) {
     .grid-container {
         display: block;
     }
@@ -176,3 +302,6 @@ h4 {
         display: block;
     }
 }
+
+
+/* Media quieries end */
