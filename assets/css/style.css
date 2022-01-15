@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-/* UNIVERSAL STYLES */
-=======
 /* Universal styles */
->>>>>>> c5d39f8985be6f321d3477971c0679eb0f7a40f1
 
 :root {
   --first: #f9f8f0;
@@ -15,6 +11,11 @@
   box-sizing: border-box;
   font-weight: normal;
   font-family: Gelasio;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 <<<<<<< HEAD h1 {
@@ -141,69 +142,40 @@ h4 {
 /* universal styles end */
 
 >>>>>>> c5d39f8985be6f321d3477971c0679eb0f7a40f1
-/* navbar */
 
-nav {
-  /* background: linear-gradient(to right, var(--first), var(--second)); */
-  font-family: "Gelasio", sans-serif;
-  font-weight: 300;
-  text-align: center;
-  padding-bottom: 20px;
-  font-size: 250%;
-}
+/* new navbar */
 
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.navbar-links ul {
+  margin: 0;
   padding: 0;
   display: flex;
-  width: 100%;
-  height: 100px;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  opacity: 0.6;
-  position: absolute;
-  top: 0;
 }
 
-.navbar ul {
-  justify-content: right;
+.navbar-links li {
   list-style: none;
-  padding-left: 500px;
 }
 
-.navbar ul li {
-  display: inline-block;
-  line-height: 50px;
-  margin: 0 5px;
-  font-family: Gelasio;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.navbar ul li a {
-  font-size: 16px;
+.navbar-links li a {
   text-decoration: none;
-  color: black;
-  padding: 8px 25px;
-  transition: all 0.5 ease;
-  text-transform: uppercase;
-  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  display: block;
 }
-
-.navbar ul li a:hover {
-  background-color: white;
-  opacity: 0.8;
-  color: rgba(136, 79, 41, 0.884);
-  box-shadow: 0 0 10px white;
-}
-
-<<<<<<< HEAD
-/*logo starts */
-=======
 /* nav bar end */
 
 /* logo on nav bar */
->>>>>>> c5d39f8985be6f321d3477971c0679eb0f7a40f1
 
 .logo {
   color: black;
@@ -212,15 +184,7 @@ nav {
   font-weight: bold;
 }
 
-<<<<<<< HEAD .logo a {
-  text-decoration: none;
-  color: black;
-}
-
-/*logo ends */
-=======
 /* nav bar ends */
->>>>>>> c5d39f8985be6f321d3477971c0679eb0f7a40f1
 
 /* CoronaVirus Animation
 Default speed is: 10s
