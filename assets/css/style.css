@@ -106,7 +106,7 @@ nav {
 .navbar ul {
     justify-content: right;
     list-style: none;
-    /* padding-left: 500px; */
+    padding-left: 500px;
 }
 
 .navbar ul li {
