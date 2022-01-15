@@ -90,3 +90,11 @@ function nytimes() {
     });
   }
 }
+
+//Navbar
+const toggelButton = document.getElementsByClassName('toggle.button')[0]
+const navbarLink = document.getElementsByClassName('navbar-links')[0]
+
+toggelButton.addEventListener('click', () => {
+    navbarLink.classList.toggle('active')
+})
