@@ -13,6 +13,69 @@
   font-family: Gelasio;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+HEAD h1 {
+  font-family: "Gelasio", sans-serif;
+  font-weight: 300;
+  background: white;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 175%;
+}
+
+h2 {
+  font-family: "Gelasio", sans-serif;
+  font-weight: 300;
+  background: linear-gradient(to right, var(--first), var(--second));
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 250%;
+}
+h3 {
+  background: linear-gradient(to right, var(--first), var(--second));
+  text-align: center;
+  padding: 30px;
+}
+
+h4 {
+  font-size: 100%;
+  text-align: center;
+  color: rgb(30, 30, 197);
+  font-family: "Gelasio", sans-serif;
+  font-weight: 300;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+a {
+  color: blue;
+  font: Gelasio;
+  text-decoration: none;
+  display: inline;
+  text-align: center;
+  margin: 16px 0px;
+  text-decoration: underline;
+}
+
+a:hover,
+a.active {
+  background: none;
+}
+
+p {
+  color: black;
+  display: inline-table;
+}
+
+img {
+  height: 200px;
+}
+
 a {
   color: blue;
   font: Gelasio;
@@ -79,57 +142,58 @@ h4 {
 
 /* navbar */
 
-nav {
-  /* background: linear-gradient(to right, var(--first), var(--second)); */
-  font-family: "Gelasio", sans-serif;
-  font-weight: 300;
-  text-align: center;
-  padding-bottom: 20px;
-  font-size: 250%;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+  opacity: 0.6;
 }
 
-.navbar {
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.navbar-link ul {
+  margin: 0;
   padding: 0;
   display: flex;
-  width: 100%;
-  height: 100px;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  opacity: 0.6;
-  position: absolute;
-  top: 0;
 }
 
-.navbar ul {
-  justify-content: right;
+.navbar-link li {
   list-style: none;
-  padding-left: 500px;
 }
 
-.navbar ul li {
-  display: inline-block;
-  line-height: 50px;
-  margin: 0 5px;
-  font-family: Gelasio;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.navbar ul li a {
-  font-size: 16px;
+.navbar-link li a {
   text-decoration: none;
-  color: black;
-  padding: 8px 25px;
-  transition: all 0.5 ease;
-  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  display: block;
 }
 
-.navbar ul li a:hover {
+.navbar-link li:hover {
   background-color: white;
   opacity: 0.8;
-  color: rgba(136, 79, 41, 0.884);
   box-shadow: 0 0 10px white;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
 }
 
 /* nav bar end */
@@ -212,30 +276,42 @@ MoveUpDown is a keyFrames that define the position*/
 /* covid tracker section end */
 
 /* about project section */
+.about-section {
+  text-align: center;
+}
 
 .title {
   background: linear-gradient(to right, var(--first), var(--second));
   padding: 20px;
 }
 
-button {
-  border: none;
-  border-radius: 8px;
-  padding: 8px 15px;
-  margin-left: 470px;
-  background-color: darkblue;
-  color: #fff;
+.section {
+  background-color: transparent;
   text-align: center;
 }
 
 .btn {
-  text-decoration: none;
+  display: inline-block;
+  background-color: darkcyan;
   color: white;
+  text-decoration: none;
+  text-align: center;
 }
 
-/* About Project */
+.team-card {
+  align-items: center;
+}
+
+.card {
+  align-items: center;
+}
+
+.content {
+  align-items: center;
+}
+
 .image-section {
-  text-align: center;
+  align-items: center;
 }
 
 .quote {
@@ -245,6 +321,38 @@ button {
 /* About project end */
 
 /* Media quieries */
+
+@media (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-link {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-link ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-link li {
+    text-align: center;
+  }
+
+  .navbar-link li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-link.active {
+    display: flex;
+  }
+}
 
 @media (min-width: 980px) and (max-width: 1199.98px) {
   .grid-container {
@@ -281,5 +389,3 @@ button {
     display: block;
   }
 }
-
-/* Media quieries end */
