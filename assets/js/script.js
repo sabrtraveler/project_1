@@ -1,3 +1,12 @@
+//Navbar//
+
+var toggelButton = document.getElementsByClassName('toggle-button')[0]
+var navbarLink = document.getElementsByClassName('navbar-link')[0]
+
+toggelButton.addEventListener('click', () => {
+    navbarLink.classList.toggle('active')
+})
+
 //First API - Covid Tracker //
 
 window.onload = function () {
@@ -91,10 +100,3 @@ function nytimes() {
   }
 }
 
-//Navbar
-const toggelButton = document.getElementsByClassName('toggle.button')[0]
-const navbarLink = document.getElementsByClassName('navbar-links')[0]
-
-toggelButton.addEventListener('click', () => {
-    navbarLink.classList.toggle('active')
-})

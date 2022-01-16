@@ -194,37 +194,6 @@ h4 {
   border-radius: 10px;
 }
 
-@media (max-width: 600px) {
-  .toggle-button {
-    display: flex;
-  }
-
-  .navbar-link {
-    display: none;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-link ul {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .navbar-link li {
-    text-align: center;
-  }
-
-  .navbar-link li a {
-    padding: 0.5rem 1rem;
-  }
-
-  .navbar-link.active {
-    display: flex;
-  }
-}
 /* nav bar end */
 
 /* logo on nav bar */
@@ -268,8 +237,8 @@ MoveUpDown is a keyFrames that define the position*/
 }
 
 .banner-image {
-  width: 100%;
-  height: 100%;
+  width: 1400px;
+  height: 333px;
   display: block;
 }
 
@@ -338,6 +307,38 @@ button {
 /* About project end */
 
 /* Media quieries */
+
+@media (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-link {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-link ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-link li {
+    text-align: center;
+  }
+
+  .navbar-link li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-link.active {
+    display: flex;
+  }
+}
 
 @media (min-width: 980px) and (max-width: 1199.98px) {
   .grid-container {
