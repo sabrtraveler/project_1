@@ -140,7 +140,7 @@ h4 {
 
 /* universal styles end */
 
-/* new navbar */
+/* navbar */
 
 .navbar {
   display: flex;
@@ -173,7 +173,9 @@ h4 {
 }
 
 .navbar-link li:hover {
-  background-color: rosybrown;
+  background-color: white;
+  opacity: 0.8;
+  box-shadow: 0 0 10px white;
 }
 
 .toggle-button {
@@ -237,8 +239,8 @@ MoveUpDown is a keyFrames that define the position*/
 }
 
 .banner-image {
-  width: 1400px;
-  height: 333px;
+  width: 100%;
+  height: 100%;
   display: block;
 }
 
@@ -274,30 +276,42 @@ MoveUpDown is a keyFrames that define the position*/
 /* covid tracker section end */
 
 /* about project section */
+.about-section {
+  text-align: center;
+}
 
 .title {
   background: linear-gradient(to right, var(--first), var(--second));
   padding: 20px;
 }
 
-button {
-  border: none;
-  border-radius: 8px;
-  padding: 8px 15px;
-  margin-left: 470px;
-  background-color: darkblue;
-  color: #fff;
+.section {
+  background-color: transparent;
   text-align: center;
 }
 
 .btn {
-  text-decoration: none;
+  display: inline-block;
+  background-color: darkcyan;
   color: white;
+  text-decoration: none;
+  text-align: center;
 }
 
-/* About Project */
+.team-card {
+  align-items: center;
+}
+
+.card {
+  align-items: center;
+}
+
+.content {
+  align-items: center;
+}
+
 .image-section {
-  text-align: center;
+  align-items: center;
 }
 
 .quote {
@@ -375,5 +389,3 @@ button {
     display: block;
   }
 }
-
-/* Media quieries end */
